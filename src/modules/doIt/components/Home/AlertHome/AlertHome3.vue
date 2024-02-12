@@ -1,5 +1,5 @@
 <template>
-<div class="h-[4px] bg-amYellow  rounded-r-3xl l max-w-1120  " :style="{ width: increaseWith + '%' }" ></div>
+<div class="h-[4px] bg-gradient-to-r from-white to-amYellow  rounded-r-3xl l max-w-1120  " :style="{ width: increaseWith + '%' }" ></div>
     <section
       class="flex bg-amHelperYellow gap-4 px-5 md:px-0  w-full relative "
       @mouseover="mouseoverProgressBar()"       
