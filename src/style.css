@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: GarnettRegular;
+  src: url('../../public/fonts/Garnett-Regular.ttf');
+  font-display: swap;
+}
+@font-face {
+  font-family: GarnettSemibold;
+  src: url('../../public/fonts/Garnett-Semibold.ttf');
+  font-display: swap;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: GarnettRegular;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+a {
+  color: #035cf7;
+}
+
+input[type='number'] {
+  /* Oculta las flechas en el input de tipo número */
+  appearance: textfield;
+  -moz-appearance: textfield;
+  -webkit-appearance: none;
+  margin: 0; /* Restablece el margen interior para alinear el texto correctamente */
+}
+
+/* En algunos navegadores, es posible que necesites estilos adicionales para ajustar la apariencia del input */
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+[x-cloak] {
+  display: none;
+}
+
+a {
+  color: #035cf7;
+  cursor: pointer;
+  text-decoration: underline;
+}
+a:hover {
+  color: #e91b2f;
+}
