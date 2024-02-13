@@ -24,6 +24,13 @@
           @closeAlertEmit="closeAlert"
           />
       </div>
+      
+      <div v-if="id===4">
+        <AlertHome4
+          v-if="alertVisible"
+          @closeAlertEmit="closeAlert"
+          />
+      </div>
   
   
     </section>
@@ -37,13 +44,15 @@
   import AlertHome from '../components/Home/AlertHome/AlertHome.vue'
   import AlertHome2 from '../components/Home/AlertHome/AlertHome2.vue'
   import AlertHome3 from '../components/Home/AlertHome/AlertHome3.vue'
+  import AlertHome4 from '../components/Home/AlertHome/AlertHome4.vue'
   
   export default {
     name: "AlertHomeV1",
     components:{
       AlertHome,
       AlertHome2,
-      AlertHome3
+      AlertHome3,
+      AlertHome4,
     },
     props:{
 
