@@ -1,0 +1,1 @@
+import{_ as o,c as n,o as t,F as c,g as e}from"./index-P88tddxK.js";const s={},a=e("h1",null,"No Page Found",-1),r=e("h3",null,"404",-1);function _(l,d){return t(),n(c,null,[a,r],64)}const f=o(s,[["render",_]]);export{f as default};
