@@ -63,6 +63,7 @@ import { ref } from "vue";
 import SymbolsCloseMenu from '../../../ui/assets/icons/SymbolsCloseMenu.vue'
 import Warning from '../../../ui/assets/icons/Warning.vue'
 import Progressbar from './Progressbar.vue';
+import alerMessagesJson from '../../../assets/alertMessages.json'
 
 
 
@@ -81,38 +82,7 @@ export default {
         const alertPosition = ref(0);
         const pauseAlert = ref(false)
 
-        const alertMessages = ref([
-            {
-                id: 1,
-                title: "Alert_1",
-                message:
-                    "Conoce los requisitos emitidos por las autoridades de Canadá, España, Francia y Reino Unido.",
-                link: "https://www.google.com",
-            },
-            {
-                id: 2,
-                title: "Alert_2",
-                message:
-                    "Conoce los requisitos emitidos por las autoridades de Canadá, España, Francia y Reino Unido.2",
-                link: "https://www.google.com",
-            },
-            {
-                id: 3,
-                title: "Alert_3",
-                message:
-                    "Conoce los requisitos emitidos por las autoridades de Canadá, España, Francia y Reino Unido.3",
-                link: "https://www.google.com",
-            },
-            {
-                id: 4,
-                title: "Alert_4",
-                message:
-                    "Conoce los requisitos emitidos por las autoridades de Canadá, España, Francia y Reino Unido.4",
-                link: "https://www.google.com",
-            }
-
-        ])
-
+        const alertMessages = ref(alerMessagesJson)
 
         const handleButtonClick = ( index) =>{
             alertPosition.value = index
@@ -148,9 +118,7 @@ export default {
             handleMouseLeave
 
         }
-
     }
-
 }
 </script>
 

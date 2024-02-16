@@ -6,10 +6,7 @@ export default {
   content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
   theme: {
     extend: {
-      fontFamily: {
-        GarnettRegular: ['GarnettRegular', 'sans-serif'],
-        GarnettSemibold: ['GarnettSemibold', 'sans-serif']
-      },
+      fontFamily: {},
       colors: {
         amBrandBlue: {
           DEFAULT: '#0B2343'

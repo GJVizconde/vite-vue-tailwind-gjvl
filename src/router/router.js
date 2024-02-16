@@ -11,6 +11,20 @@ const routes = [
     component: () =>
       import(/* webpackChunkName: "AboutPageChunk" */ '../modules/doIt/pages/AboutPage.vue')
   },
+  // {
+  //   path: '/pdf',
+  //   name: 'pdf-page',
+  //   component: () => import(/* webpackChunkName: "PdfPageChunk" */ '../modules/doIt/pages/PdfPage.vue')
+  // },
+  {
+    path: '/pdf/:id',
+    name: 'pdf-id',
+    component: () => import(/* webpackChunkName: "pdf" */ '../modules/doIt/pages/PdfPage.vue'),
+    props: (route) => {
+      const id = Number(route.params.id)
+      return isNaN(id) ? { id: 1 } : { id: id }
+    }
+  },
   {
     path: '/alertHome/:id',
     name: 'alertHome-id',

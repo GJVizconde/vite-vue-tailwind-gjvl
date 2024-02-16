@@ -93,11 +93,8 @@ export default {
 
             mouseoverProgressBar,
             mouseoutProgressBar
-
         }
-
     }
-
 }
 </script>
 
