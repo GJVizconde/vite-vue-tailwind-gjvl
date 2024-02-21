@@ -44,7 +44,6 @@ export default {
     const pdfViewer = ref(null);
 
     const onDownload = () => {
-      table.value.innerHTML = props.htmlContent;
 
       const tableWidth = table.value.clientWidth;
       const tableHeight = table.value.clientHeight;
@@ -65,6 +64,10 @@ export default {
           console.log(pdfData);
 
           pdfViewer.value.src = pdfData;
+
+
+
+
         })
         .catch((error) => {
           console.log("Error al generar el PDF:", error);
@@ -72,7 +75,18 @@ export default {
     };
 
     onMounted(() => {
-      onDownload();
+      table.value.innerHTML = props.htmlContent;
+      const image = table.value.querySelector('img');
+      if (image) {
+        if (image.complete) {
+          onDownload();
+        } else {
+          image.onload = onDownload;
+        }
+      } else {
+        onDownload();
+        console.error('No se encontró ninguna imagen en el contenido HTML.');
+      }
     });
 
     return {
